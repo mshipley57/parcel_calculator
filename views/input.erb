@@ -5,15 +5,15 @@
 <form action="/output">
   <div class="form-group">
     <label for="length">Length of your parcel</label>
-    <input id="l" name="length" class="form-control" type="text">
+    <input id="l" name="length" class="form-control" type="text" onkeyup="this.value=this.value.replace(/[^\d]/,'')">
   </div>
   <div class="form-group">
     <label for="width">Width of your parcel</label>
-    <input id="w" name="width" class="form-control" type="text">
+    <input id="w" name="width" class="form-control" type="text" onkeyup="this.value=this.value.replace(/[^\d]/,'')">
   </div>
   <div class="form-group">
     <label for="height">Height of your parcel</label>
-    <input id="h" name="height" class="form-control" type="text">
+    <input id="h" name="height" class="form-control" type="text" onkeyup="this.value=this.value.replace(/[^\d]/,'')">
   </div>
   <button type="submit" class="btn">Go!</button>
 </form>
