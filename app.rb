@@ -13,12 +13,17 @@ get('/output') do
   @length = params.fetch("length").to_i
   @height = params.fetch("height").to_i
   @width = params.fetch("width").to_i
+
+  @lengthhalf = @length/2 +10
+  @widthhalf = @width/2 +10
+  @heighthalf = @height/2 +10
+
   parcelobject = Parcel.new(@length, @width, @height)
 
   @parcel_volume = parcelobject.volume
-  erb(:output)
+
   @parcel_cost = parcelobject.cost
-  erb(:output)
+
   @parcel_surface = parcelobject.surfaceArea
   erb(:output)
 
